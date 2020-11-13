@@ -58,6 +58,8 @@ The number of nodes in the given tree is less than 4096.
  * @param {Node} root
  * @return {Node}
  */
+
+// First Approch
 var connect = function(root) {
     
     if(!root) {
