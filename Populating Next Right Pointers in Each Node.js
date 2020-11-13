@@ -120,3 +120,31 @@ var preorder = function(root) {
     preorder(root.right);
     
 }
+
+// 2nd Appr
+var connect = function(root) {
+    
+    if(!root) {
+        return root;
+    }
+    
+    let level = root;
+    
+    while(level.left) {
+        let head = level;
+        
+        while(head != null) {
+            head.left.next = head.right;
+            if(head.next) {
+               ``` head.right.next = head.next.left;```
+            }
+            head = head.next;
+        }
+        level = level.left;
+    }
+    
+    return root;
+    
+    
+    
+};
